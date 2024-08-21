@@ -1,20 +1,24 @@
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
-import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default async function Home() {
+export default async function Dashboard() {
   const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/signin");
+  }
 
   return (
     <main className="mx-auto mt-36 max-w-6xl">
       <div className="flex flex-col gap-6">
-        <h1 className="text-3xl font-bold">NextAuth Starter</h1>
         <div className="flex flex-col gap-y-4">
           <div>
-            This is a starter project that use{" "}
-            <Link href="https://nextjs.authjs.dev">NextAuth.js</Link> for
-            authentication and{" "}
-            <Link href="https://raw.tremor.so">Tremor Raw</Link> for components.
+            <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
+            <p>Welcome, {session?.user?.name}!</p>
+            <p>
+              This is a protected page. Only authenticated users can see this.
+            </p>
           </div>
           <div className="flex flex-col bg-gray-100 rounded-md">
             <div className="p-4 font-bold bg-gray-200 rounded-t-md">
