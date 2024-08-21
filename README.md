@@ -5,7 +5,7 @@ This project is a Next.js application with authentication features using NextAut
 
 ## Features
 
-- Next.js 13 with App Router
+- Next.js 14 with App Router
 - Authentication with NextAuth.js
 - Email Magic Link Sign In
 - GitHub OAuth Sign In
