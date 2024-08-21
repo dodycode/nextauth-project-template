@@ -31,8 +31,8 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone [https://github.com/dodycode/nextauth-project-template.git](https://github.com/dodycode/nextauth-project-template.git)
+   cd nextauth-project-template
    ```
 
 2. Install the dependencies:
@@ -57,7 +57,10 @@ Before you begin, ensure you have met the following requirements:
    GOOGLE_CLIENT_ID=your-google-oauth-client-id
    GOOGLE_CLIENT_SECRET=your-google-oauth-client-secret
 
-   EMAIL_SERVER=smtp://username:password@smtp.example.com:587
+   EMAIL_SERVER_USER=username
+   EMAIL_SERVER_PASSWORD=password
+   EMAIL_SERVER_HOST=smtp.example.com
+   EMAIL_SERVER_PORT=587
    EMAIL_FROM=noreply@example.com
    ```
 
@@ -79,7 +82,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `components/`: Reusable React components
 - `lib/`: Utility functions and configurations
 - `public/`: Static assets
-- `styles/`: Global styles and Tailwind CSS configuration
 
 ## Authentication Flow
 
