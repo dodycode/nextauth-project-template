@@ -1,4 +1,4 @@
-# Next.js Authentication Project Starter
+# Next.js Authentication Project Template
 
 ![alt text](image.png)
 This project is a Next.js application with authentication features using NextAuth.js, Supabase, and Tremor for UI components.
